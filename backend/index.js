@@ -4,13 +4,14 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import scenarioRoutes from './routes/scenarioRoutes.js';
 import simulateRoutes from './routes/simulateRoutes.js';
+import reportRoutes from './routes/reportRoutes.js';
 
 dotenv.config(); // ✅ Load environment variables
 
 const app = express();
 app.use(cors());
 app.use(express.json());
-
+app.use('/report', reportRoutes);
 // Routes
 app.use('/scenarios', scenarioRoutes);
 app.use('/simulate', simulateRoutes);
