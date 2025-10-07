@@ -1,5 +1,6 @@
-import axios from 'axios';
+
+import axios from "axios";
 const API = axios.create({
-  baseURL: 'http://localhost:5000', // update when deployed
+  baseURL: "https://complyance-ir2u.onrender.com",
 });
 export default API;
